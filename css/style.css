@@ -4,7 +4,19 @@
     padding: 10px;
 }
 
-.fancy-header {
-    color: purple;
+h1, h2, .fancy-header {
+    color: forestgreen;
     text-decoration: underline;
+}
+
+body {
+    color: white;
+    background-color: lightcyan;
+    background-image:url(../img/background.jpeg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+ul {
+    list-style-type: square;
 }
