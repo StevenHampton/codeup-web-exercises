@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
+
 body {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Cabin Sketch', cursive;
     font-size: 20px;
     color: white;
     background-color: lavenderblush;
@@ -21,6 +23,10 @@ h1, h2, .fancy-header {
 
 ul {
     list-style-type: square;
+}
+
+table, tr, td, th {
+    border: 2px #FF9800 solid;
 }
 
 table {
@@ -49,3 +55,5 @@ a:hover {
 a:active {
     color:green;
 }
+
+
