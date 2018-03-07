@@ -47,6 +47,6 @@ a:active {
     color:green;
 }
 
-#underline {
+.underline {
     text-decoration: underline;
 }
