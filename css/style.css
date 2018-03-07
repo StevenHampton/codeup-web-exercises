@@ -1,3 +1,13 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    color: white;
+    background-color: lavenderblush;
+    background-image:url(../img/background.jpeg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
 #container {
     margin: 50px auto;
     width: 800px;
@@ -7,17 +17,6 @@
 h1, h2, .fancy-header {
     color: #ff9800;
     text-decoration: underline;
-}
-
-body {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 20px;
-    color: white;
-    background-color: lavenderblush;
-    background-image:url(../img/background.jpeg);
-    background-repeat:no-repeat;
-    background-size:cover;
-    ;
 }
 
 ul {
