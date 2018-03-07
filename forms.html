@@ -6,37 +6,55 @@
     <body>
         <form method="POST" action="https://requestb.in/1gbr9t71">
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="text" placeholder="Enter email">
-            <br>
+            <table border="0">
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input id="email" name="email" type="text" placeholder="Enter email">
+                    </td>
+                </tr>
 
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" placeholder="Enter your password">
-            <br>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                    <input id="password" name="password" type="password" placeholder="Enter your password">
+                    </td>
+                </tr>
 
-            <label for="bio">Bio</label>
-            <textarea id="bio" name="bio" cols="25" rows="10"></textarea>
-            <br>
+                <tr>
+                    <td>
+                        <label for="bio">Bio:</label>
+                    </td>
+                    <td>
+                        <textarea id="bio" name="bio" cols="25" rows="10"></textarea>
+                    </td>
+                </tr>
+            </table>
 
 
             <h2>How did you hear about us?</h2>
+            <p><sub>Select all that apply</sub></p>
             <label for="billboard">
-                Billboard <input type="checkbox" id="billboard"  name="Advertisement" value="billboard">
+                <input type="checkbox" id="billboard"  name="Advertisement" value="billboard"> Billboard
             </label>
             <br>
 
             <label for="radio">
-                 Radio Advertisement <input type="checkbox" id="radio" name="Advertisement" value="radio">
+                <input type="checkbox" id="radio" name="Advertisement" value="radio"> Radio Advertisement
             </label>
             <br>
 
             <label for="internet">
-                 Internet Advertisement <input type="checkbox" id="internet" name="Advertisement" value="internet">
+                <input type="checkbox" id="internet" name="Advertisement" value="internet"> Internet Advertisement
             </label>
             <br>
 
             <label for="other">
-                Other <input type="checkbox" id="other" name="Advertisement" value="other">
+                <input type="checkbox" id="other" name="Advertisement" value="other">Other
             </label>
             <br>
 
