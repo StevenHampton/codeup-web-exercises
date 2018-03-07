@@ -27,6 +27,10 @@ ul {
 table {
     font-size: 25px;
 }
+
+th {
+    text-decoration: underline;
+}
 td {
     padding: 20px;
 }
@@ -45,8 +49,4 @@ a:hover {
 
 a:active {
     color:green;
-}
-
-.underline {
-    text-decoration: underline;
 }
