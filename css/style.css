@@ -1,20 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
 
+
 body {
     font-family: 'Cabin Sketch', cursive;
     font-size: 20px;
     color: white;
     background-color: lavenderblush;
-    background-image:url(../img/background.jpeg);
-    background-repeat:no-repeat;
+    background-image: url(../img/background.jpeg);
+    background-repeat: no-repeat;
     background-size:cover;
 }
 
-#container {
-    margin: 50px auto;
-    width: 800px;
+.container {
+    margin: 0 auto;
+    width: 560px;
     padding: 10px;
+    align-content: center;
+    text-align: center;
 }
+
+img {
+    animation: wobble 4s infinite;
+}
+
 
 h1, h2, .fancy-header {
     color: #ff9800;
@@ -22,7 +30,12 @@ h1, h2, .fancy-header {
 }
 
 ul {
-    list-style-type: square;
+    margin: 0 auto;
+    list-style-position: inside;
+}
+
+ol{
+    list-style-position: inside;
 }
 
 table, tr, td, th {
@@ -55,5 +68,3 @@ a:hover {
 a:active {
     color:green;
 }
-
-
