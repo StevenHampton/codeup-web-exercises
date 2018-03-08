@@ -45,3 +45,9 @@ h1 {
 #violet {
     background-color: violet;
 }
+
+body>img{
+    top: 0;
+    right: 0;
+    position: fixed;
+}
