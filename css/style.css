@@ -4,42 +4,34 @@
 body {
     font-family: 'Cabin Sketch', cursive;
     font-size: 20px;
-    color: white;
-    background-color: lavenderblush;
-    background-image: url(../img/background.jpeg);
+    color: #98999B;
+    background-image: url(../img/background2.png);
     background-repeat: no-repeat;
     background-size:cover;
 }
 
 .container {
     margin: 0 auto;
-    width: 560px;
-    padding: 10px;
-    align-content: center;
+    width: 80%;
+}
+
+.column {
+    width: 33%;
+    display: inline-block;
     text-align: center;
 }
 
-img {
-    animation: wobble 4s infinite;
+hr {
+    border-color: #98999B;
 }
 
-
-h1, h2, .fancy-header {
-    color: #ff9800;
+h1, h2, h3, h4, h5, h6 {
+    color: #8AB052;
     text-decoration: underline;
 }
 
-ul {
-    margin: 0 auto;
-    list-style-position: inside;
-}
-
-ol{
-    list-style-position: inside;
-}
-
-table, tr, td, th {
-    border: 2px #FF9800 solid;
+.table-border{
+    border: 2px #98999B solid;
 }
 
 table {
@@ -50,7 +42,7 @@ th {
     text-decoration: underline;
 }
 td {
-    padding: 20px;
+    padding: 10px;
 }
 
 a:link {
@@ -67,4 +59,9 @@ a:hover {
 
 a:active {
     color:green;
+}
+
+.img_size {
+    height: 400px;
+    width: 400px;
 }
