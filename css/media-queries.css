@@ -112,20 +112,22 @@
 
     #main{
         clear: both;
-        height: 300px;
+        height: auto;
         width: 600px;
         float: left;
     }
     .sub-section{
         clear: right;
         width: 300px;
-        height: 700px;
+        height: auto;
         float: left;
     }
     footer{
         height: auto;
         width: 300px;
-        float: bottom;
+        float: left;
+        clear: both;
+        margin-top: 200px;
     }
 
 
