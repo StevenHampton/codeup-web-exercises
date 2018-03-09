@@ -14,6 +14,10 @@ body {
     margin: 0 auto;
     width: 80%;
 }
+#container_head{
+    margin: 0 auto;
+    width: 40%;
+}
 
 .column {
     width: 33%;
@@ -63,5 +67,5 @@ a:active {
 
 .img_size {
     height: 400px;
-    width: 400px;
+    width: 641px;
 }

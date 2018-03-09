@@ -1,0 +1,133 @@
+@media screen and (max-width:767px) {
+    .alert-info {
+        width: 339px;
+        height: 54px;
+        background-color: #D7FEFE;
+        border: 1px solid #ccc;
+        margin: 10px;
+    }
+
+    .hidden-on-desktop a {
+        text-align: center;
+        position: relative;
+        right: -109px;
+        top: 17px;
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        list-style-type: none;
+        width: 339px;
+        height: 300px;
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-links li {
+        background-color: #ccc;
+        height: 54px;
+        width: 339px;
+        margin: 10px -17px;
+    }
+
+    .nav-links a {
+        position: relative;
+        right: 0;
+        top: 17px;
+    }
+
+    body {
+        width: 359px;
+        height: auto;
+    }
+
+    .header-img {
+        width: 339px;
+        height: 224px;
+        align-content: center;
+    }
+
+    .header-img img {
+        width: 100%;
+        height: 100%;
+        padding: 23px;
+        padding-top: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 51px;
+        margin-bottom: 0;
+    }
+
+    p, h2 {
+        padding-left: 23px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}
+@media screen and (min-width:768px) {
+
+    .hidden-on-desktop a{
+       visibility: hidden;
+    }
+
+    .header-img {
+        width: 890px;
+        height: 385px;
+        align-content: center;
+        margin: 10px;
+    }
+
+    .header-img img {
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin: 15px 0;
+
+    }
+    .nav-links{
+        height: auto;
+        width: 217px;
+        float: left;
+        margin-top: 33px;
+        padding-left: 539px;
+    }
+
+    nav li{
+        position: relative;
+        display: inline;
+        text-align: right;
+        padding: 5px;
+
+    }
+    h1{
+        float: left;
+        padding-left: 15px;
+    }
+
+    #main{
+        clear: both;
+        height: 300px;
+        width: 600px;
+        float: left;
+    }
+    .sub-section{
+        clear: right;
+        width: 300px;
+        height: 700px;
+        float: left;
+    }
+    footer{
+        height: auto;
+        width: 300px;
+        float: bottom;
+    }
+
+
+
+}
