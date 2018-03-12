@@ -101,6 +101,14 @@ footer > p {
         float: left;
     }
 
+    .main {
+        width: 66%;
+    }
+
+    .sub-section {
+        width: 33%;
+    }
+
     footer {
         clear: both;
         padding-top: 30px;
