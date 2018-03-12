@@ -1,48 +1,94 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Lobster', cursive;
     font-size: 20px;
-    color: #98999B;
-    background-image: url(../img/background2.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-
-.container {
-    margin: 0 auto;
-    width: 80%;
-}
-#container_head{
-    margin: 0 auto;
-    width: 40%;
-}
-
-.column {
-    width: 33%;
-    display: inline-block;
-    text-align: center;
-}
-
-hr {
-    border-color: #98999B;
+    color: #748D34;
+    background-image: url("../img/wormz.png");
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #8AB052;
+    color: #623F2E;
     text-decoration: underline;
+    text-align: center;
+}
+
+#header{
+    height: 4em;
+    width: 100%;
+    background-color: #623F2E;
+    color: #D7FBFA;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    margin: auto;
+}
+#header>h1 {
+    color: #D7FBFA;
+}
+#main{
+    padding: .5em;
+    padding-top: 4em;
+    text-align: center;
+}
+#main>ul, #main>ol{
+    list-style-type: none;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column{
+    flex: 50%;
+    padding: 0 4px;
+}
+
+.column img{
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+#low {
+    height: auto;
+    width: 100%;
+    padding-top: .5em;
+    clear: both;
+}
+
+#footer{
+    text-align: center;
+}
+hr {
+    border-color: #623F2E;
+    width: 100%;
+    padding-left: 1em;
 }
 
 .table-border{
-    border: 2px #98999B solid;
+    border: 2px #623F2E solid;
 }
 
+.img_bump{
+    clear: both;
+}
 table {
+    margin: auto;
     font-size: 25px;
 }
 
 th {
+    color: #623F2E;
     text-decoration: underline;
 }
 td {
@@ -63,9 +109,4 @@ a:hover {
 
 a:active {
     color:green;
-}
-
-.img_size {
-    height: 400px;
-    width: 641px;
 }
