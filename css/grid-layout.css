@@ -23,6 +23,10 @@
     border: 1px solid black;
 }
 
+.col-one-half{
+    width: 50%;
+}
+
 .col-one-third{
     width: 33.33%;
 }
@@ -31,16 +35,20 @@
     width: 66.67%;
 }
 
-.col-one-half{
-    width: 50%;
-}
-
 .col-one-fourth{
     width: 25%;
 }
 
 .col-three-fourths{
     width: 75%;
+}
+
+.col-one-fifth{
+    width: 20%;
+}
+
+.col-four-fifths{
+    width: 80%;
 }
 
 .col-one-eighth{
