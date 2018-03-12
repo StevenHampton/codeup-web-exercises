@@ -1,4 +1,4 @@
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
     .alert-info {
         width: 339px;
         height: 54px;
@@ -70,7 +70,7 @@
         margin-top: 50px;
     }
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:769px) {
 
     .hidden-on-desktop a{
        visibility: hidden;
@@ -125,8 +125,7 @@
     footer{
         height: auto;
         width: 300px;
-        float: left;
-        clear: both;
+        float: bottom;
         margin-top: 200px;
     }
 
