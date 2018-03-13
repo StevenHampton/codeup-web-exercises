@@ -49,18 +49,19 @@
         <h2>Build your own pizza!</h2>
         <hr>
         <nav class="nav nav-tabs nav-justified">
-            <a class="nav-link active" href="#">
+            <a class="nav-link active" href="#crust">
                 <span class="badge badge-pill badge-secondary">1</span>
                 Size and crust</a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#cheese">
                 <span class="badge badge-pill badge-secondary">2</span>
                 Cheese and Sauce</a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#toppings">
                 <span class="badge badge-pill badge-secondary">3</span>
                 Toppings</a>
         </nav>
         <div class="card text-left">
             <div class="card-header">
+                <a name="crust"></a>
                 Choose size and crust
             </div>
             <div class="card-body">
@@ -115,11 +116,14 @@
             </div>
             <div class="card-footer text-muted">
                 <button class="btn">
-                    <img src="imgs/next.png">
+                    <a href="#cheese">
+                        <img src="imgs/next.png">
+                    </a>
                 </button>
             </div>
         </div><div class="card text-left">
         <div class="card-header">
+            <a name="cheese"></a>
             Choose cheese and sauce.
         </div>
         <div class="card-body">
@@ -170,15 +174,20 @@
         </div>
         <div class="card-footer text-muted">
             <button class="btn">
+                <a href="#toppings">
                 <img src="imgs/next.png">
+                </a>
             </button>
             <button class="btn">
+                <a href="#crust">
                 <img src="imgs/previous.png">
+                </a>
             </button>
         </div>
     </div>
         <div class="card text-left">
             <div class="card-header">
+                <a name="toppings"></a>
                 Choose Toppings
             </div>
             <div class="card-body">
