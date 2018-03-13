@@ -10,6 +10,8 @@
     background-image: url('../imgs/pizza.png');
     text-align: center;
     padding: 4rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .jumbotron>h1{
