@@ -1,3 +1,34 @@
+.navbar{
+    background-color: lightgrey;
+}
+.btn-outline-success {
+    color: #000;
+    border-color: #000;
+}
+
 .jumbotron{
-    background-image: url("../imgs/pizza.png");
+    background-image: url('../imgs/pizza.png');
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.jumbotron>h1{
+    background-color: #fff;
+    opacity: .5;
+    width: 100%;
+}
+
+.btn{
+    float: right;
+}
+
+.card-header{
+    background-color: #307FF6;
+    color: white;
+    text-align: left;
+}
+
+.card-body .card-header{
+    background-color: lightgrey;
+    color: black;
 }

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Pizza World</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/custom.css">
         <!-- Your custom styles go here -->
     </head>
     <body>
@@ -17,7 +18,7 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -38,12 +39,60 @@
                 </nav>
         </div>
     </nav>
-    <div class="container">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+
+    <div class="d-none d-md-block">
+        <div class="jumbotron">
             <h1 class="display-4">Welcome to Pizza World!</h1>
         </div>
     </div>
+    <div class="container">
+        <h2>Build your own pizza!</h2>
+        <hr>
+        <nav class="nav nav-tabs nav-justified">
+            <a class="nav-link active" href="#">
+                <span class="badge badge-pill badge-secondary">1</span>
+                Size and crust</a>
+            <a class="nav-link" href="#">
+                <span class="badge badge-pill badge-secondary">2</span>
+                Cheese and Sauce</a>
+            <a class="nav-link" href="#">
+                <span class="badge badge-pill badge-secondary">3</span>
+                Toppings</a>
+        </nav>
+        <div class="card text-center">
+            <div class="card-header">
+                Choose size and crust
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer text-muted">
+                <a href="#" class="btn btn-primary">Next step</a>
+            </div>
+        </div>
     </div>
         <!-- Main page content -->
 
