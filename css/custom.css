@@ -25,10 +25,34 @@
 .card-header{
     background-color: #307FF6;
     color: white;
-    text-align: left;
 }
 
 .card-body .card-header{
     background-color: lightgrey;
     color: black;
+}
+
+.input-group{
+    border: 1px solid whitesmoke;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.remove-margin {
+    margin: 0;
+}
+
+.card{
+    margin-bottom: 2em;
+}
+
+.input-group-text{
+    background-color: white;
+    border: none;
+}
+
+.btn{
+    padding: 0;
 }

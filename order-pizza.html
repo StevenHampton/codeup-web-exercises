@@ -33,7 +33,7 @@
             </ul>
                 <nav class="navbar navbar-light bg-light">
                     <a class="navbar-brand" href="#">
-                        <img src="imgs/login-person.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                        <img src="imgs/login-person.png" class="d-inline-block align-top" alt="">
                         Sign up
                     </a>
                 </nav>
@@ -59,7 +59,7 @@
                 <span class="badge badge-pill badge-secondary">3</span>
                 Toppings</a>
         </nav>
-        <div class="card text-center">
+        <div class="card text-left">
             <div class="card-header">
                 Choose size and crust
             </div>
@@ -69,28 +69,194 @@
                         Hand Tossed
                     </div>
                     <div class="card-body">
+                        <p class="align-left">Garlic seasoned crust with rich, buttery taste.</p>
                         <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input name="small_hand_tossed" title="small_hand_tossed" type="radio"  aria-label="Radio button for following text input">
+                                </div>
+                                <p class="remove-margin">Small (10")</p>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <input name="medium_hand_tossed" title="medium_hand_tossed" type="radio" aria-label="Radio button for following text input">
+                                </div>
+                                <p class="remove-margin">Medium (12")</p>
+                            </div>
                         </blockquote>
                     </div>
                 </div>
 
+            </div>
+            <div class="card-body">
                 <div class="card">
                     <div class="card-header">
                         Crispy Thin
                     </div>
                     <div class="card-body">
+                        <p class="align-left">Thin enough for optimum crispy to crunchy ratio.</p>
                         <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            <div class="input-group">
+                                    <div class="input-group-text">
+                                        <input name="medium_crispy" title="medium_crispy" type="radio" aria-label="Radio button for following text input">
+                                    </div>
+                                <p class="remove-margin">Medium (12")</p>
+                            </div>
+                            <div class="input-group">
+                                    <div class="input-group-text">
+                                        <input name="large_crispy" title="large_crispy" type="radio" aria-label="Radio button for following text input">
+                                    </div>
+                                <p class="remove-margin">Large (14")</p>
+                            </div>
                         </blockquote>
                     </div>
                 </div>
 
             </div>
             <div class="card-footer text-muted">
-                <a href="#" class="btn btn-primary">Next step</a>
+                <button class="btn">
+                    <img src="imgs/next.png">
+                </button>
+            </div>
+        </div><div class="card text-left">
+        <div class="card-header">
+            Choose cheese and sauce.
+        </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                    Cheese
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="cheese_amount">Cheese</label>
+                        <select class="form-control" id="cheese_amount">
+                            <option>Normal</option>
+                            <option>Light</option>
+                            <option>Extra</option>
+                            <option>Double</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                    Sauce
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="sauce_type">What Type?</label>
+                        <select class="form-control" id="sauce_type">
+                            <option>Tomato sauce</option>
+                            <option>Marinara sauce</option>
+                            <option>BBQ sauce</option>
+                            <option>Alfredo sauce</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sauce_amount">How Much?</label>
+                        <select class="form-control" id="sauce_amount">
+                            <option>Normal</option>
+                            <option>Light</option>
+                            <option>Extra</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer text-muted">
+            <button class="btn">
+                <img src="imgs/next.png">
+            </button>
+            <button class="btn">
+                <img src="imgs/previous.png">
+            </button>
+        </div>
+    </div>
+        <div class="card text-left">
+            <div class="card-header">
+                Choose Toppings
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Choose Meats
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Beef">
+                                <label class="form-check-label" for="Beef">
+                                    Beef
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Ham">
+                                <label class="form-check-label" for="Ham">
+                                    Ham
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Steak">
+                                <label class="form-check-label" for="Steak">
+                                    Philly Steak
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="Bacon">
+                                <label class="form-check-label" for="Bacon">
+                                    Bacon
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        Choose Non-Meats
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="green_peppers">
+                                <label class="form-check-label" for="green_peppers">
+                                    Green Peppers
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="mushrooms">
+                                <label class="form-check-label" for="mushrooms">
+                                    Mushrooms
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="onions">
+                                <label class="form-check-label" for="onions">
+                                    Onions
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="jalapeño">
+                                <label class="form-check-label" for="jalapeño">
+                                    Jalepeño Peppers
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer text-muted">
+                <button class="btn">
+                    <img src="imgs/checkout.png">
+                </button>
             </div>
         </div>
     </div>
