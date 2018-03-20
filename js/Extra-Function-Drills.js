@@ -111,16 +111,40 @@
 // }
 // console.log(num + " doubled equals " + double(num));
 
-var username = prompt("Enter a username.");
-var password = prompt("Enter in a password.");
-function isValidPassword(password, username){
-    if((password.length > 4)) {
-        if ((password.substring(username) === -1 )){
-            if (password.length <= 20) {
-                return true;
-            }
+// var username = prompt("Enter a username.");
+// var password = prompt("Enter in a password.");
+// function isValidPassword(password, username){
+//     var longEnough = password.length > 5;
+//     var passIncUsername = password.indexOf(username) !== -1;
+//     var passHasWhiteSpace = password !== password.trim();
+//
+//     if (longEnough && !passIncUsername && !passHasWhiteSpace ){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+//
+// }
+// console.log("Your password is valid: " + isValidPassword(password, username));
+
+
+var sideA = prompt("Enter side Adjacent side");
+sideA = Number(sideA);
+var sideB = prompt("Enter side Opposite side");
+sideB = Number(sideB);
+var sideC = prompt("Enter the Hypotenuse");
+sideC = Number(sideC);
+
+function isRightTriangle(sideA, sideB, sideC){
+    var aSquared = sideA * sideA;
+    var bSquared = sideB * sideB;
+    var cSquared = sideC * sideC;
+    if ((aSquared+bSquared)===cSquared){
+        return true;
+    }
     else {
         return false;
     }
 }
-console.log("Your password is valid: " + isValidPassword(password, username));
+console.log("This is a right triangle: " + isRightTriangle(sideA, sideB, sideC));
