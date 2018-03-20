@@ -1,8 +1,11 @@
 "use strict";
 
-// function identity() {
-//
+
+// var argument = prompt("Enter something");
+// function identity(argument) {
+//     return argument;
 // }
+// console.log(argument);
 
 
 // var num = prompt("please enter a number to see if it's odd");
