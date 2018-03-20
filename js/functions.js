@@ -111,6 +111,7 @@
 // tipPercent = Number(tipPercent);
 // tipPercent = tipPercent / 100;
 // tipPercent = tipPercent.toFixed(2);
+//
 // var totalBill=prompt("How much is the bill?");
 // totalBill = Number(totalBill);
 //
@@ -153,13 +154,16 @@
 
 var originalPrice = prompt("How much is the original price?");
 originalPrice= Number(originalPrice).toFixed(2);
+console.log("Original price is $" + originalPrice);
+
 var discount = prompt("What percentage discount are you applying?");
 discount = Number(discount);
 discount = (discount / 100).toFixed(2);
+console.log("Discount applied is: " + discount);
 
 function applyDiscount(discount, originalPrice){
     return (originalPrice - (originalPrice * discount)).toFixed(2);
 }
 
-console.log (applyDiscount(discount, originalPrice));
+console.log ("Final price is $" + applyDiscount(discount, originalPrice));
 alert("Your final price will be $" + applyDiscount(discount, originalPrice));
