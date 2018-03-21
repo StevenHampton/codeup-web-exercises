@@ -113,7 +113,7 @@
 //     return (num * 2);
 // }
 // console.log(num + " doubled equals " + double(num));
-
+//
 // var username = prompt("Enter a username.");
 // var password = prompt("Enter in a password.");
 // function isValidPassword(password, username){
