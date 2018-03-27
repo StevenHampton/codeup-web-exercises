@@ -17,7 +17,7 @@
             firstName: "Steven",
             lastName: "Hampton",
             sayHello: function () {
-                return("Hello from " + person.firstName + " " + person.lastName + "!");
+                return("Hello from " + this.firstName + " " + this.lastName + "!");
             }
     };
 
