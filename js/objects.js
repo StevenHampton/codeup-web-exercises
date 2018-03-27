@@ -82,41 +82,41 @@
      */
 
     var books = [
-        {
-            title: "The Handmaid's Tale",
-            author: {
-                firstName: "Margaret" ,
-                lastName: "Atwood"
-            }
-        },
-        {
-            title: "2666",
-            author: {
-                firstName: "Roberto" ,
-                lastName: "Bolaño"
-            }
-        },
-        {
-            title: "Desert Solitaire",
-            author: {
-                firstName: "Edward" ,
-                lastName: "Abbey"
-            }
-        },
-        {
-            title: "Geek Love",
-            author: {
-                firstName: "Katherine" ,
-                lastName: "Dunn"
-            }
-        },
-        {
-            title: "To Kill A Mockingbird",
-            author: {
-                firstName: "Harper" ,
-                lastName: "Lee"
-            }
-        }
+        // {
+        //     title: "The Handmaid's Tale",
+        //     author: {
+        //         firstName: "Margaret" ,
+        //         lastName: "Atwood"
+        //     }
+        // },
+        // {
+        //     title: "2666",
+        //     author: {
+        //         firstName: "Roberto" ,
+        //         lastName: "Bolaño"
+        //     }
+        // },
+        // {
+        //     title: "Desert Solitaire",
+        //     author: {
+        //         firstName: "Edward" ,
+        //         lastName: "Abbey"
+        //     }
+        // },
+        // {
+        //     title: "Geek Love",
+        //     author: {
+        //         firstName: "Katherine" ,
+        //         lastName: "Dunn"
+        //     }
+        // },
+        // {
+        //     title: "To Kill A Mockingbird",
+        //     author: {
+        //         firstName: "Harper" ,
+        //         lastName: "Lee"
+        //     }
+        // }
 
     ];
 
@@ -147,12 +147,12 @@
 
 
 
-    books.forEach(function(book, index){
-        console.log("Book #" +(index+1));
-        console.log("Title: " + book.title);
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-        console.log("---")
-    });
+    // books.forEach(function(book, index){
+    //     console.log("Book #" +(index+1));
+    //     console.log("Title: " + book.title);
+    //     console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    //     console.log("---")
+    // });
 
     /**
      * Bonus:
@@ -164,5 +164,40 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    var addAnother = true;
+    while (addAnother === true) {
+        var con = confirm("Would you like to add another book");
+        if (con === true){
+            addAnother = true;
+            function createBook(){
+                var booktitle =prompt("Enter the title of the book");
+                var aFirstName= prompt("Enter the Author's first name");
+                var aLastName= prompt("Enter the Author's last name");
+                return {
+                    title: booktitle,
+                    author: {
+                        firstName: aFirstName,
+                        lastName: aLastName
+                    }
+                }
+            }
+            books.push(createBook());
+        }
+        else {
+            addAnother = false;
+        }
+
+    }
+
+
+
+
+    books.forEach(function(book, index){
+        console.log("Book #" +(index+1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---")
+    });
 
 })();
