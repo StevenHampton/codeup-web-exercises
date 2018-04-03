@@ -1,72 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style type="text/css">
+    <meta charset="UTF-8">
+    <title>Google Maps</title>
+    <style>
         #map-canvas {
-            width: 770px;
-            height: 481px;
+            width: 600px;
+            height: 400px;
         }
     </style>
 </head>
 <body>
-<!-- div to hold map -->
 <div id="map-canvas"></div>
-
-<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxRJQ2z_RF7BIbR_QLUawSWrQAa1Hhbds"></script>
-
-<!-- Script to show address on map -->
-<script type="text/javascript">
-    (function() {
-        "use strict";
-
-        // Set our map options
-        var mapOptions = {
-            // Set the zoom level
-            zoom: 18,
-
-            // This sets the center of the map at our location
-            center: {
-                lat:  29.426791,
-                lng: -98.489602
-            },
-            mapTypeId: google.maps.MapTypeId.SATELLITE
-        };
-
-        // Render the map
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-        // Set our address to geocode
-        var address = "9985 IH-10 West, San Antonio, TX 78230";
-
-// Init geocoder object
-        var geocoder = new google.maps.Geocoder();
-
-// Geocode our address
-        geocoder.geocode({ "address": address }, function(results, status) {
-
-            // Check for a successful result
-            if (status === google.maps.GeocoderStatus.OK) {
-
-                // Recenter the map over the address
-                map.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    position: results[0].geometry.location,
-                    map: map,
-                    //Drop animation
-                    animation: google.maps.Animation.DROP
-                });
-                //On click of the marker
-                marker.addListener('click', function() {
-                var info = new google.maps.InfoWindow({
-                    content: 'First Watch<br><strong>AMAZING BREAKFAST</strong>'
-                });
-                info.open(map, marker);});
-            } else {
-
-                // Show an error message with the status if our request fails
-                alert("Geocoding was not successful - STATUS: " + status);
-            }
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2l-5CY-2Ds6dIyc8doaPHImwacbive3A"></script>
+<script>
+    var mapOptions = {
+        zoom: 19,
+        center: {
+            lat: 29.426791,
+            lng: -98.489602
+        },
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    };
+    var mapCanvas = document.getElementById('map-canvas');
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    function callback(results, status, restaurant) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+            map.setZoom(18);
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map,
+                animation: google.maps.Animation.DROP
+            });
+            var info = new google.maps.InfoWindow({
+                content: restaurant.info
+            });
+            marker.addListener('click', function() {
+                info.open(map, marker);
+            });
+        } else {
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    }
+    var restaurants = [
+        {
+            address: "9985 Ih 10 West, San Antonio, TX 78230",
+            info: "First Watch<br> Great Breakfast!!"
+        },
+        {
+            address: "15900 La Cantera Pkwy, San Antonio, TX 78256",
+            info: "Palenque Grill La Cantera<br> Amazing Mexican Food!!"
+        },
+        {
+            address: "15715 I-10, San Antonio, TX 78257",
+            info: "Pappadeaux Seafood Kitchen<br> Great Seafood!!"
+        }
+    ];
+    // setInterval, instead of foreach
+    restaurants.forEach(function (restaurant) {
+        geocoder.geocode({address: restaurant.address}, function (results, status) {
+            console.log(restaurant);
+            callback(results, status, restaurant);
         });
-    })();
+    });
+    // element.addEventListener('click', callback);
 </script>
 </body>
+</html>
