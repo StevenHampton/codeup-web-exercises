@@ -29,7 +29,8 @@
             center: {
                 lat:  29.426791,
                 lng: -98.489602
-            }
+            },
+            mapTypeId: google.maps.MapTypeId.SATELLITE
         };
 
         // Render the map
@@ -50,13 +51,16 @@
                 map.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
                     position: results[0].geometry.location,
-                    map: map
+                    map: map,
+                    //Drop animation
+                    animation: google.maps.Animation.DROP
                 });
-
+                //On click of the marker
+                marker.addListener('click', function() {
                 var info = new google.maps.InfoWindow({
-                    content: 'First Watch'
+                    content: 'First Watch<br><strong>AMAZING BREAKFAST</strong>'
                 });
-                info.open(map, marker);
+                info.open(map, marker);});
             } else {
 
                 // Show an error message with the status if our request fails
