@@ -4,15 +4,25 @@
         <title>JQuery Exercise</title>
     </head>
     <body>
-
+        <h1 id="myh1">This is my H1</h1>
+        <p id="myp">This is my paragraph tag</p>
+        <ul>
+            <li class="codeup">Unordered list item 1</li>
+            <li class="codeup">Unordered list item 2</li>
+            <li class="codeup">Unordered list item 3</li>
+            <li class="codeup">Unordered list item 4</li>
+            <li class="codeup">Unordered list item 5</li>
+            <li>Unordered list item 6</li>
+        </ul>
+        <div id="container">
+            <h2 id ="codeup">this h2 is inside a div container</h2>
+        </div>
     <!--Libraries go at the bottom of your body-->
         <script src="js/jquery-2.2.4.js"></script>
         <!--Make sure all your javascript code goes below the library-->
         <script>
-            "use strict";
-            $(document).ready(function() {
-                alert( 'The DOM has finished loading!' );
-            });
+            $("h1, p, li").css({"background-color" : "yellow"});
+            alert($('h1').html());
         </script>
     </body>
 </html>
