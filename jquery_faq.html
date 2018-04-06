@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice JS</title>
+    <style>.invisible{
+        display: none;
+    }</style>
+</head>
+<body>
+<h1>Cool National Park Facts</h1>
+    <dl>
+        <dt>Biscayne National Park, FL</dt>
+        <dd class="invisible">There are 72 shipwrecks in this park.</dd>
+        <dt>Great Basin National Park, NV</dt>
+        <dd class="invisible">Has some of the darkest skies in the lower 48 states, so great for stargazing.</dd>
+        <dt>North Cascades National Park, WA</dt>
+        <dd class="invisible">One of the snowiest places on earth!</dd>
+        <dt>Channel Islands National Park, CA</dt>
+        <dd class="invisible">Among the islands’ more than 2,000 plant and animal species are 145 found nowhere else in the world</dd>
+        <dt>Wrangell-St. Elias National Park,AK</dt>
+        <dd class="invisible">The park has North America’s highest concentration of glaciers and encompasses nine of the 16 tallest mountains in the U.S</dd>
+        <dt>Yosemite, CA</dt>
+        <dd class="invisible">North America’s highest waterfall is here</dd>
+        <dt>Grand Canyon, AZ</dt>
+        <dd class="invisible">Parts of canyon measure a mile deep and up to 18 miles wide</dd>
+        <dt>Denali, Alaska</dt>
+        <dd class="invisible">Has North America's tallest mountain Mt. Mckinley that is 20,320 ft tall</dd>
+        <dt>Olympic, WA</dt>
+        <dd class="invisible">Has trees that are over 500 years old are reach 20 stories high!</dd>
+        <dt>Arches, UT</dt>
+        <dd class="invisible">Has 2,000-plus sandstone arches</dd>
+    </dl>
+<button id="ddButton">Toggle Descriptions</button>
+<script src="js/jquery.js"></script>
+<script>
+    $('#ddButton').on('click', function(){
+        $('dd').toggleClass('invisible');
+    });
+</script>
+</body>
+</html>

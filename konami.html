@@ -40,7 +40,16 @@
                 input = "";
             }
     }});
-
+    $(window).on("beforeunload", function() {
+        $.ajax("someURL", {
+            async: false,
+            data: "test",
+            success: function(event) {
+                console.log("Ajax request executed");
+            }
+        });
+        return "This is a jQuery version";
+    });
 </script>
 </body>
 </html>
