@@ -4,15 +4,43 @@
     <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
-
-<script src="/js/jquery-2.2.4.js"></script>
+<h1 class="center">Konami Code</h1>
+<audio preload='auto' loop id="myAudio"> <source src="sound/disco.mp3" type="audio/mp3" >
+</audio>
+<script src="js/jquery.js"></script>
 <script>
     "use strict";
+    var input = '';
+    var konamiCode = '3838404037393739666513';
+    $(".center").css("text-align","center");
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
-    });
+    function Cycle(array) {
+        var i = 0;
+        this.next = function () {
+            i %= array.length;
+            return array[i++];
+        }
+    }
+    var colors = new Cycle(['rgb(255,0,0)','rgb(0,255,0)', 'rgb(0,0,255)']);
+
+    $(document).keydown(function(e) {
+        input += ("" + e.keyCode);
+        if (e.keyCode === 13){
+            if (input === konamiCode) {
+                alert('you have 30 lives!');
+                $('html').css('background', 'url(imgs/discoCat.gif');
+                $('body').css({'background-color': colors.next()});
+                $("#myAudio").trigger("play");
+                setInterval(function () {
+                    $('body').css('background-color', colors.next())}, 500);
+
+            }
+            else {
+                alert("You have entered the code in wrong please try again.");
+                input = "";
+            }
+    }});
+
 </script>
 </body>
 </html>
