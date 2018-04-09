@@ -26,7 +26,7 @@
         <form>
             <div class="form-group">
                 <label for="payment">Payment $</label>
-                <input type="email" class="form-control" id="payment"
+                <input type="text" class="form-control" id="payment"
                        placeholder="0.00">
             </div>
             <button id="get-lucky-number" type="button" class="btn btn-primary">
@@ -64,7 +64,7 @@
             var id = setInterval(function () {
                 $('#lucky-circle').css('background-color', colors[i % colors.length]);
                 i++;
-                if (i == count) {
+                if (i === count) {
                     clearInterval(id);
                     $('#lucky-circle').css('background-color', colors[color]);
                     $('#final-price').html('$' + finalPrice.toFixed(2));
