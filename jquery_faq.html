@@ -13,8 +13,8 @@
     </style>
 </head>
 <body>
-<h1>Cool National Park Facts</h1>
-    <h3>Feel free to highlight any park your interested in by clicking it!</h3>
+    <h1>Cool National Park Facts</h1>
+    <h2>Feel free to highlight any park your interested in by clicking it!</h2>
     <dl>
         <dt class="highlight">Biscayne National Park, FL</dt>
         <dd class="invisible">There are 72 shipwrecks in this park.</dd>
@@ -37,17 +37,52 @@
         <dt class="highlight">Arches, UT</dt>
         <dd class="invisible">Has 2,000-plus sandstone arches</dd>
     </dl>
-<button id="ddButton">Toggle Descriptions</button>
-<script src="js/jquery.js"></script>
-<script>
-    $('#ddButton').on('click', function(){
-        $('dd').toggleClass('invisible');
-    });
-        $('.highlight').click(function(event) {
-            event.preventDefault();
-            $(this).toggleClass('highlighted');
+    <ul>
+        <h3>Calaveras Big Trees State Park, CA</h3>
+        <li>Founded in 1931</li>
+        <li>Tallest tree is 325 ft tall</li>
+        <li>The largest tree has a 25 ft diameter</li>
+        <li>The trees are so large they can provide enough wood to build 40 five-room houses</li>
+    </ul>
+    <ul>
+        <h3>Guadalupe River State Park, TX</h3>
+        <li>You can fish swim tube and canoe here</li>
+        <li>There is camping and hiking</li>
+        <li>They loan fishing gear</li>
+        <li>They have 85 water and electric campsites</li>
+    </ul>
+    <ul>
+        <h3>Lockhart State Park, TX</h3>
+        <li>Have golfing here</li>
+        <li>Can look for geocaches</li>
+        <li>Can fish for bass and catfish here</li>
+        <li>Is a short distance from San Antonio and Austin</li>
+    </ul>
+    <button id="ddButton">Toggle Descriptions</button>
+    <button id="highlightButton">Highlight</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $('#ddButton').on('click', function(){
+            $('dd').toggleClass('invisible');
         });
-    $('html').css("text-align", 'center')
-</script>
+            $('.highlight').click(function(event) {
+                event.preventDefault();
+                $(this).toggleClass('highlighted');
+            });
+        $('html').css("text-align", 'center');
+        $('#highlightButton').on('click', function() {
+           $('ul').each(function(){
+               $(this).children().last().css("background-color", "yellow");
+           })
+        });
+        $('h3').on('click', function(){
+           $(this).parent().children().css("font-weight", "bold");
+        });
+        $('li').on('click', function(){
+            $(this).parent().children().first().next().css("color", "blue");
+        })
+    </script>
 </body>
 </html>
+
+
