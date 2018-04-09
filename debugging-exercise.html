@@ -62,7 +62,7 @@
             var i = 0;
 
             var id = setInterval(function () {
-                $('#lucky-circle').css('background-color', colors[i]);
+                $('#lucky-circle').css('background-color', colors[i % colors.length]);
                 i++;
                 if (i == count) {
                     clearInterval(id);
