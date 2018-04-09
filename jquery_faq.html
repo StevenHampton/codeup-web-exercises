@@ -13,6 +13,14 @@
     </style>
 </head>
 <body>
+    <div id="newsLetter">
+        <span class="goAway">X</span>
+        <h1>Would you like to sign up for our newsletter?</h1>
+    </div>
+    <div id="register">
+        <span class="goAway">X</span>
+        <h2>Register for this site now!</h2>
+    </div>
     <h1>Cool National Park Facts</h1>
     <h2>Feel free to highlight any park your interested in by clicking it!</h2>
     <dl>
@@ -39,24 +47,24 @@
     </dl>
     <ul>
         <h3>Calaveras Big Trees State Park, CA</h3>
-        <li>Founded in 1931</li>
-        <li>Tallest tree is 325 ft tall</li>
-        <li>The largest tree has a 25 ft diameter</li>
-        <li>The trees are so large they can provide enough wood to build 40 five-room houses</li>
+        <li class="hidden">Founded in 1931</li>
+        <li class="hidden">Tallest tree is 325 ft tall</li>
+        <li class="hidden">The largest tree has a 25 ft diameter</li>
+        <li class="hidden">The trees are so large they can provide enough wood to build 40 five-room houses</li>
     </ul>
     <ul>
         <h3>Guadalupe River State Park, TX</h3>
-        <li>You can fish swim tube and canoe here</li>
-        <li>There is camping and hiking</li>
-        <li>They loan fishing gear</li>
-        <li>They have 85 water and electric campsites</li>
+        <li class="hidden">You can fish swim tube and canoe here</li>
+        <li class="hidden">There is camping and hiking</li>
+        <li class="hidden">They loan fishing gear</li>
+        <li class="hidden">They have 85 water and electric campsites</li>
     </ul>
     <ul>
         <h3>Lockhart State Park, TX</h3>
-        <li>Have golfing here</li>
-        <li>Can look for geocaches</li>
-        <li>Can fish for bass and catfish here</li>
-        <li>Is a short distance from San Antonio and Austin</li>
+        <li class="hidden">Have golfing here</li>
+        <li class="hidden">Can look for geocaches</li>
+        <li class="hidden">Can fish for bass and catfish here</li>
+        <li class="hidden">Is a short distance from San Antonio and Austin</li>
     </ul>
     <button id="ddButton">Toggle Descriptions</button>
     <button id="highlightButton">Highlight</button>
@@ -69,6 +77,8 @@
                 event.preventDefault();
                 $(this).toggleClass('highlighted');
             });
+        $(".hidden").hide();
+        $("#register").hide();
         $('html').css("text-align", 'center');
         $('#highlightButton').on('click', function() {
            $('ul').each(function(){
@@ -77,10 +87,21 @@
         });
         $('h3').on('click', function(){
            $(this).parent().children().css("font-weight", "bold");
+           $(this).nextUntil("ul").slideToggle();
         });
         $('li').on('click', function(){
             $(this).parent().children().first().next().css("color", "blue");
-        })
+        });
+        $("ul").css("list-style-type", "none");
+        $("span").css("float", "left");
+        $(".goAway").on("click", function(){
+            $(this).parent().hide();
+        });
+        jQuery(document).ready(function() {
+            setTimeout(function() {
+            $("#register").fadeIn();
+            }, 8000);
+        });
     </script>
 </body>
 </html>
