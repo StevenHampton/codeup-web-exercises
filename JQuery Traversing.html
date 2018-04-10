@@ -24,9 +24,9 @@
         <h1>JQuery Traversing</h1>
         <div class="container">
             <row>
-                <div class="col-3 frame" id="frame1"><img src="imgs/jq1.jpeg" id="pic1"><button class="btn" id="btn1">MIX</button></div>
-                <div class="col-3 frame" id="frame2"><img src="imgs/jq2.jpeg" id="pic2"><button class="btn" id="btn2">MIX</button></div>
-                <div class="col-3 frame" id="frame3"><img src="imgs/jq3.jpeg" id="pic3"><button class="btn" id="btn3">MIX</button></div>
+                <div class="col-3 frame" id="frame1"><button class="btn" id="btn1">MIX</button></div>
+                <div class="col-3 frame" id="frame2"><button class="btn" id="btn2">MIX</button></div>
+                <div class="col-3 frame" id="frame3"><button class="btn" id="btn3">MIX</button></div>
             </row>
         </div>
         <!-- Main page content -->
@@ -37,6 +37,31 @@
         <script src="js/jquery.js"></script>
         <script>
             // <!-- Your custom JS goes here -->
+
+            var frames = [$("#frame1"), $("#frame2"), $("#frame3")];
+            var pic1 = ('<img id="theImg" src="imgs/jq1.jpeg" />');
+            var pic2 = ('<img id="theImg" src="imgs/jq2.jpeg" />');
+            var pic3 = ('<img id="theImg" src="imgs/jq3.jpeg" />');
+            var pictures = [pic1, pic2, pic3];
+
+            arrange(frames, pictures);
+            function arrange(frame, picture){
+                frame = frames;
+                picture = pictures;
+                for (i=0; i<3;i++){
+                    frame[i].prepend(picture[i]);
+                }
+                return frame;
+            }
+
+            $("#btn1").on("click", function(){
+                console.log(pictures);
+                pictures = pictures.slice(0, 2);
+                console.log(pictures);
+                pictures = pictures.unshift(pic3);
+                console.log(pictures);
+                arrange(frames, pictures)
+            })
 
         </script>
     </body>
