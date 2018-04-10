@@ -6,27 +6,17 @@
         <title>JQuery Traversing</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
         <style>
+            img{width: 100%; height: 100%}
         /*Your custom styles go here*/
-            *{padding: 0; margin: 0;}
-            h1{text-align: center}
-            .frame{
-                border: 5px solid #623F2E;
-                float: left;
-                margin: 1em;
-                height: 20em;
-                padding: 0;
-            }
-            img{height: 100%; width: 100%}
-            .btn{float: left; margin: 2em 6em; background-color: lightgrey; border: 1px solid black}
         </style>
     </head>
     <body>
         <h1>JQuery Traversing</h1>
         <div class="container">
             <row>
-                <div class="col-3 frame" id="frame1"><button class="btn" id="btn1">MIX</button></div>
-                <div class="col-3 frame" id="frame2"><button class="btn" id="btn2">MIX</button></div>
-                <div class="col-3 frame" id="frame3"><button class="btn" id="btn3">MIX</button></div>
+                <div class="col-3 frame frame1"><img src="imgs/jq1.jpeg"><button class="btn" id="left">MIX</button></div>
+                <div class="col-3 frame frame2"><img src="imgs/jq2.jpeg"><button class="btn" id="center">MIX</button></div>
+                <div class="col-3 frame frame3"><img src="imgs/jq3.jpeg"><button class="btn" id="right">MIX</button></div>
             </row>
         </div>
         <!-- Main page content -->
@@ -38,30 +28,28 @@
         <script>
             // <!-- Your custom JS goes here -->
 
-            var frames = [$("#frame1"), $("#frame2"), $("#frame3")];
-            var pic1 = ('<img id="theImg" src="imgs/jq1.jpeg" />');
-            var pic2 = ('<img id="theImg" src="imgs/jq2.jpeg" />');
-            var pic3 = ('<img id="theImg" src="imgs/jq3.jpeg" />');
-            var pictures = [pic1, pic2, pic3];
+            $(".left").click(function() {
+                $(".frame").each(function() {
+                    $(this).insertAfter($(this).next('.frame2'));
+                })
+            });
 
-            arrange(frames, pictures);
-            function arrange(frame, picture){
-                frame = frames;
-                picture = pictures;
-                for (i=0; i<3;i++){
-                    frame[i].prepend(picture[i]);
-                }
-                return frame;
-            }
+            $(".right").click(function() {
+                $(".frame").each(function() {
+                    $(this).insertBefore($(this).prev('.frame2'));
+                })
+            });
 
-            $("#btn1").on("click", function(){
-                console.log(pictures);
-                pictures = pictures.slice(0, 2);
-                console.log(pictures);
-                pictures = pictures.unshift(pic3);
-                console.log(pictures);
-                arrange(frames, pictures)
-            })
+            $(".center").click(function() {
+                var count = Math.floor(Math.random() * 25);
+                $(".frame").each(function() {
+                    if (count % 2 === 0) {
+                        $(this).insertBefore($(this).prev('.frame1'));
+                    } else {
+                        $(this).insertAfter($(this).next('.frame3'));
+                    }
+                })
+            });
 
         </script>
     </body>
