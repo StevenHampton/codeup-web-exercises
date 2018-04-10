@@ -57,8 +57,8 @@
         inventory.done(function (response) {
             console.log(response);
             response.forEach(function (name){
-                $("#insertProducts").append("<tr><td class='col-3'>" + name.title + "</td><td>"
-                    + name.quantity + "</td><td>"
+                $("#insertProducts").append("<tr><td>" + name.title + "</td><td>"
+                    + name.quantity + "</td><td>$"
                     + name.price + "</td><td>"
                     + name.categories +  "</td></tr>")
             });
