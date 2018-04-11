@@ -12,7 +12,7 @@
 <body>
 
 <table id="tableContainer" class="container col-12">
-    <tbody id="blogBody"></tbody>
+    <tbody id="posts"></tbody>
 </table>
 
 <!-- Main page content -->
@@ -32,7 +32,7 @@
     blog.done(function (response) {
         console.log(response);
         response.forEach(function (name){
-            $("#blogBody").append("<tr><td class='col-8'><h1>" + name.title + "</h1></td></tr><tr><td class='col-8'>"
+            $("#posts").append("<tr><td class='col-8'><h1>" + name.title + "</h1></td></tr><tr><td class='col-8'>"
                 + name.content + "</td></tr><tr><td class='col-8'><strong>Categories</strong><em>: "
                 + name.categories + "</em></td></tr><tr><td class='col-8'>"
                 + name.date +  "</td></tr>")
