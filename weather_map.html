@@ -46,7 +46,7 @@
         var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
         $("#cityName").text(data.city.name);
         $("#firstDay").html(
-            "<p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>") +
+            "<h3>Today</h3><p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>") +
             "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'" + "</p>" +
             "<p><strong>Clouds: </strong>" + data.list[0].weather[0].description + "</p>" +
             "<p><strong>Humidity: </strong>" + data.list[0].humidity + "</p>" +
@@ -54,7 +54,7 @@
             "<p><strong>Pressure: </strong>" + data.list[0].pressure + "</p>"
         );
         $("#secondDay").html(
-            "<p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>") +
+            "<h3>Tomorrow</h3><p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>") +
             "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png'" + "</p>" +
             "<p><strong>Clouds: </strong>" + data.list[1].weather[0].description + "</p>" +
             "<p><strong>Humidity: </strong>" + data.list[1].humidity + "</p>" +
@@ -62,7 +62,7 @@
             "<p><strong>Pressure: </strong>" + data.list[1].pressure + "</p>"
         );
         $("#thirdDay").html(
-            "<p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>") +
+            "<h3>Next Day</h3><p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>") +
             "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'" + "</p>" +
             "<p><strong>Clouds: </strong>" + data.list[2].weather[0].description + "</p>" +
             "<p><strong>Humidity: </strong>" + data.list[2].humidity + "</p>" +
@@ -117,7 +117,7 @@
             var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
             $("#cityName").text(data.city.name);
             $("#firstDay").html(
-                "<p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>") +
+                "<h3>Today</h3></h3><p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>") +
                 "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'" + "</p>" +
                 "<p><strong>Clouds: </strong>" + data.list[0].weather[0].description + "</p>" +
                 "<p><strong>Humidity: </strong>" + data.list[0].humidity + "</p>" +
@@ -125,7 +125,7 @@
                 "<p><strong>Pressure: </strong>" + data.list[0].pressure + "</p>"
             );
             $("#secondDay").html(
-                "<p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>") +
+                "<h3>Tomorrow</h3><p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>") +
                 "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png'" + "</p>" +
                 "<p><strong>Clouds: </strong>" + data.list[1].weather[0].description + "</p>" +
                 "<p><strong>Humidity: </strong>" + data.list[1].humidity + "</p>" +
@@ -133,7 +133,7 @@
                 "<p><strong>Pressure: </strong>" + data.list[1].pressure + "</p>"
             );
             $("#thirdDay").html(
-                "<p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>") +
+                "<h3>Next Day</h3><p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>") +
                 "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'" + "</p>" +
                 "<p><strong>Clouds: </strong>" + data.list[2].weather[0].description + "</p>" +
                 "<p><strong>Humidity: </strong>" + data.list[2].humidity + "</p>" +
