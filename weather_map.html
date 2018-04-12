@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather Page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <style>
         #map-canvas {
             width: 770px;
@@ -13,37 +12,32 @@
             margin: auto;
             border: 1px solid black;
         }
+
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Weather Application</h1>
-        <h2 id="cityName"></h2>
-        <row>
-            <div class="col-4 tempBox" id="firstDay"></div>
-            <div class="col-4 tempBox" id="secondDay"></div>
-            <div class="col-4 tempBox" id="thirdDay"></div>
-        </row>
-    </div>
-    <div id="map-canvas"></div>
+<div class="container">
+    <h1>Weather Application</h1>
+    <h2 id="cityName"></h2>
+    <row>
+        <div class="col-4 tempBox" id="firstDay"></div>
+        <div class="col-4 tempBox" id="secondDay"></div>
+        <div class="col-4 tempBox" id="thirdDay"></div>
+    </row>
+</div>
+<div id="map-canvas"></div>
 <!-- Main page content -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxRJQ2z_RF7BIbR_QLUawSWrQAa1Hhbds"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxRJQ2z_RF7BIbR_QLUawSWrQAa1Hhbds"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/jquery.js"></script>
 <script>
-
-        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+    $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
         APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-        lat:    29.423017,
-        lon:   -98.48527,
+        lat: 29.423017,
+        lon: -98.48527,
         units: "imperial",
         cnt: 3
     }).done(function(data) {
@@ -52,28 +46,28 @@
         var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
         $("#cityName").text(data.city.name);
         $("#firstDay").html(
-            "<p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>")
-            + "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'" + "</p>"
-            + "<p><strong>Clouds: </strong>" + data.list[0].weather[0].description + "</p>"
-            + "<p><strong>Humidity: </strong>" + data.list[0].humidity + "</p>"
-            + "<p><strong>Wind: </strong>" + data.list[0].speed + "</p>"
-            + "<p><strong>Pressure: </strong>" + data.list[0].pressure + "</p>"
+            "<p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>") +
+            "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'" + "</p>" +
+            "<p><strong>Clouds: </strong>" + data.list[0].weather[0].description + "</p>" +
+            "<p><strong>Humidity: </strong>" + data.list[0].humidity + "</p>" +
+            "<p><strong>Wind: </strong>" + data.list[0].speed + "</p>" +
+            "<p><strong>Pressure: </strong>" + data.list[0].pressure + "</p>"
         );
         $("#secondDay").html(
-            "<p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>")
-            + "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png'" + "</p>"
-            + "<p><strong>Clouds: </strong>" + data.list[1].weather[0].description + "</p>"
-            + "<p><strong>Humidity: </strong>" + data.list[1].humidity + "</p>"
-            + "<p><strong>Wind: </strong>" + data.list[1].speed + "</p>"
-            + "<p><strong>Pressure: </strong>" + data.list[1].pressure + "</p>"
+            "<p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>") +
+            "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png'" + "</p>" +
+            "<p><strong>Clouds: </strong>" + data.list[1].weather[0].description + "</p>" +
+            "<p><strong>Humidity: </strong>" + data.list[1].humidity + "</p>" +
+            "<p><strong>Wind: </strong>" + data.list[1].speed + "</p>" +
+            "<p><strong>Pressure: </strong>" + data.list[1].pressure + "</p>"
         );
         $("#thirdDay").html(
-            "<p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>")
-            + "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'" + "</p>"
-            + "<p><strong>Clouds: </strong>" + data.list[2].weather[0].description + "</p>"
-            + "<p><strong>Humidity: </strong>" + data.list[2].humidity + "</p>"
-            + "<p><strong>Wind: </strong>" + data.list[2].speed + "</p>"
-            + "<p><strong>Pressure: </strong>" + data.list[2].pressure + "</p>"
+            "<p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>") +
+            "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'" + "</p>" +
+            "<p><strong>Clouds: </strong>" + data.list[2].weather[0].description + "</p>" +
+            "<p><strong>Humidity: </strong>" + data.list[2].humidity + "</p>" +
+            "<p><strong>Wind: </strong>" + data.list[2].speed + "</p>" +
+            "<p><strong>Pressure: </strong>" + data.list[2].pressure + "</p>"
         )
     });
     $("body").css({
@@ -86,35 +80,35 @@
         "text-align": "center",
         "height": "20em"
     });
-        var myLatlng = new google.maps.LatLng(29.424122, -98.493629);
-        var mapOptions = {
-            zoom: 5,
-            center: myLatlng
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    var myLatlng = new google.maps.LatLng(29.424122, -98.493629);
+    var mapOptions = {
+        zoom: 5,
+        center: myLatlng
+    };
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-        // Place a draggable marker on the map
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            draggable:true,
-            title:"Weather Checker"
-        });
+    // Place a draggable marker on the map
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        draggable: true,
+        title: "Weather Checker"
+    });
 
 
 
-        google.maps.event.addListener(marker, 'dragend', function(){
+    google.maps.event.addListener(marker, 'dragend', function() {
         $("#cityName").empty();
         $("#firstDay").empty();
         $("#secondDay").empty();
         $("#thirdDay").empty();
         console.log(event);
-            var latitude = marker.getPosition().lat();
-            var longitude = marker.getPosition().lng();
+        var latitude = marker.getPosition().lat();
+        var longitude = marker.getPosition().lng();
         $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-            lat:    latitude,
-            lon:   longitude,
+            lat: latitude,
+            lon: longitude,
             units: "imperial",
             cnt: 3
         }).done(function(data) {
@@ -123,34 +117,33 @@
             var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
             $("#cityName").text(data.city.name);
             $("#firstDay").html(
-                "<p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>")
-                + "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'" + "</p>"
-                + "<p><strong>Clouds: </strong>" + data.list[0].weather[0].description + "</p>"
-                + "<p><strong>Humidity: </strong>" + data.list[0].humidity + "</p>"
-                + "<p><strong>Wind: </strong>" + data.list[0].speed + "</p>"
-                + "<p><strong>Pressure: </strong>" + data.list[0].pressure + "</p>"
+                "<p><strong>" + data.list[0].temp.max + "°/" + data.list[0].temp.min + ("°</strong></p>") +
+                "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'" + "</p>" +
+                "<p><strong>Clouds: </strong>" + data.list[0].weather[0].description + "</p>" +
+                "<p><strong>Humidity: </strong>" + data.list[0].humidity + "</p>" +
+                "<p><strong>Wind: </strong>" + data.list[0].speed + "</p>" +
+                "<p><strong>Pressure: </strong>" + data.list[0].pressure + "</p>"
             );
             $("#secondDay").html(
-                "<p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>")
-                + "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png'" + "</p>"
-                + "<p><strong>Clouds: </strong>" + data.list[1].weather[0].description + "</p>"
-                + "<p><strong>Humidity: </strong>" + data.list[1].humidity + "</p>"
-                + "<p><strong>Wind: </strong>" + data.list[1].speed + "</p>"
-                + "<p><strong>Pressure: </strong>" + data.list[1].pressure + "</p>"
+                "<p><strong>" + data.list[1].temp.max + "°/" + data.list[1].temp.min + ("°</strong></p>") +
+                "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png'" + "</p>" +
+                "<p><strong>Clouds: </strong>" + data.list[1].weather[0].description + "</p>" +
+                "<p><strong>Humidity: </strong>" + data.list[1].humidity + "</p>" +
+                "<p><strong>Wind: </strong>" + data.list[1].speed + "</p>" +
+                "<p><strong>Pressure: </strong>" + data.list[1].pressure + "</p>"
             );
             $("#thirdDay").html(
-                "<p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>")
-                + "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'" + "</p>"
-                + "<p><strong>Clouds: </strong>" + data.list[2].weather[0].description + "</p>"
-                + "<p><strong>Humidity: </strong>" + data.list[2].humidity + "</p>"
-                + "<p><strong>Wind: </strong>" + data.list[2].speed + "</p>"
-                + "<p><strong>Pressure: </strong>" + data.list[2].pressure + "</p>"
+                "<p><strong>" + data.list[2].temp.max + "°/" + data.list[2].temp.min + ("°</strong></p>") +
+                "<p>" + "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'" + "</p>" +
+                "<p><strong>Clouds: </strong>" + data.list[2].weather[0].description + "</p>" +
+                "<p><strong>Humidity: </strong>" + data.list[2].humidity + "</p>" +
+                "<p><strong>Wind: </strong>" + data.list[2].speed + "</p>" +
+                "<p><strong>Pressure: </strong>" + data.list[2].pressure + "</p>"
             )
         });
     });
 
-
-
 </script>
 </body>
+
 </html>
