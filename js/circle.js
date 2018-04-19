@@ -6,14 +6,11 @@
         radius: 3,
 
         getArea: function () {
-            // TODO: complete this method
             // hint: area = pi * radius^2
             return Math.PI * Math.pow(this.radius, 2);
-            // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
-            // TODO: complete this method.
             if(doRounding){
                 console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(circle.getArea()));
             }
@@ -33,20 +30,16 @@
     circle.logInfo(true);
 
     console.log("=======================================================");
-    // TODO: Change the radius of the circle to 5.
 
     var circle2 = {
         radius: 5,
 
         getArea: function () {
-            // TODO: complete this method
             // hint: area = pi * radius^2
             return Math.PI * Math.pow(this.radius, 2);
-            // TODO: return the proper value
         },
 
         logInfo: function (doRounding) {
-            // TODO: complete this method.
             if(doRounding){
                 console.log("Area of a circle with radius: " + this.radius + ", is: " + Math.round(circle2.getArea()));
             }
