@@ -35,9 +35,7 @@
 <script>
 (function() {
     "use strict";
-    // TODO: Create an ajax GET request for /data/inventory.json
     var inventory = $.ajax('data/inventory.json');
-    // TODO: Take the data from inventory.json and append it to the products table
     inventory.done(function (response) {
         console.log(response);
         response.forEach(function (name){
