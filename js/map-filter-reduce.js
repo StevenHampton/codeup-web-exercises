@@ -34,7 +34,12 @@ const users = [
 const user3 = users.filter(lang => lang.languages.length >= 3);
 console.log(user3);
 
-const emailStr = user3.map(user3 => user3.email);
+const emailStr = users.map(user => user.email);
 console.log(emailStr);
 
+const userId = users.reduce((id, user) => {
+    id[user.id] = user.name;
+    return id;
+}, {});
+console.log(userId);
 
